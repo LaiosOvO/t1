@@ -1,0 +1,88 @@
+{
+  "group": 50,
+  "business_id": "TEST-AIR-0050",
+  "provenance": "SYNTHETIC USER-SAMPLE-MATCHED",
+  "validation_class": "business_consistent",
+  "invoice_no": "INV-TEST-0050",
+  "contract_no": "CT-TEST-0050",
+  "po_no": "PO-TEST-0050",
+  "hawb": "TEST-FRA-0050",
+  "mawb": "000-90000050",
+  "seller": "Orion Test Chemicals 050 GmbH",
+  "buyer": "Suzhou Test Materials 050 Co., Ltd.",
+  "currency": "CNY",
+  "incoterms": "CPT PVG",
+  "transport_mode": "5",
+  "invoice_date": "2026-05-12",
+  "po_date": "2026-05-06",
+  "flight_date": "2026-05-13",
+  "arrival_date": "2026-05-15",
+  "due_date": "2026-06-11",
+  "quantity_pc": 5,
+  "packages": 3,
+  "net_kg": 12,
+  "gross_kg": 23,
+  "volume_cbm": 0.136469,
+  "chargeable_kg": 23.0,
+  "chargeable_rule": "max(gross, CBM*1000000/6000), rounded up to 0.5 KG, synthetic test convention",
+  "goods_amount": 122050,
+  "freight": 870,
+  "vat": 0,
+  "invoice_total": 122920,
+  "items": [
+    {
+      "part": "OTC-050A",
+      "quantity_pc": 2,
+      "unit_price": 20150,
+      "amount": 40300,
+      "unit_net_kg": 3,
+      "net_kg": 6,
+      "gross_kg": 10,
+      "dimensions_cm": [
+        37,
+        29,
+        21
+      ],
+      "volume_cbm": 0.022533,
+      "package": "P050-1",
+      "delivery_note": "DN-050-1",
+      "hs_test_placeholder": "0000000000"
+    },
+    {
+      "part": "OTC-050B",
+      "quantity_pc": 1,
+      "unit_price": 47650,
+      "amount": 47650,
+      "unit_net_kg": 4,
+      "net_kg": 4,
+      "gross_kg": 9,
+      "dimensions_cm": [
+        50,
+        40,
+        37
+      ],
+      "volume_cbm": 0.074,
+      "package": "P050-2",
+      "delivery_note": "DN-050-2",
+      "hs_test_placeholder": "0000000000"
+    },
+    {
+      "part": "OTC-050C",
+      "quantity_pc": 2,
+      "unit_price": 17050,
+      "amount": 34100,
+      "unit_net_kg": 1,
+      "net_kg": 2,
+      "gross_kg": 4,
+      "dimensions_cm": [
+        48,
+        32,
+        26
+      ],
+      "volume_cbm": 0.039936,
+      "package": "P050-3",
+      "delivery_note": "DN-050-3",
+      "hs_test_placeholder": "0000000000"
+    }
+  ]
+}

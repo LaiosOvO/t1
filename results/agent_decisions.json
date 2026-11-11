@@ -1,0 +1,929 @@
+{
+  "business_id": "DEMO-SH-20260907-02",
+  "trace_id": "tr_t1_970831deb9fc",
+  "stages": 5,
+  "steps": 20,
+  "duration_ms": 12060.78,
+  "field_status": {
+    "MISSING": 7,
+    "FILLED": 25,
+    "WARNING": 1
+  },
+  "fields_by_source_file": {
+    "（无来源）": [
+      {
+        "field_key": "pre_entry_no",
+        "label_cn": "预录入编号",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 报关行申报时生成]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "customs_no",
+        "label_cn": "海关编号",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 海关审结后回执]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "declaration_date",
+        "label_cn": "申报日期",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 实际申报日填写]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "record_no",
+        "label_cn": "备案号",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 一般贸易免填或待补]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "license_no",
+        "label_cn": "许可证号",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 素材未提供]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "transit_port",
+        "label_cn": "经停港",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 直航或未提供]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "incidental_fee",
+        "label_cn": "杂费",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 素材未提供]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      }
+    ],
+    "提单.pdf": [
+      {
+        "field_key": "domestic_consignee",
+        "label_cn": "境内收货人",
+        "status": "FILLED",
+        "value": "苏州诺瓦测试显示材料有限公司（统一社会信用代码：[缺失/待补充]）",
+        "page_no": 1,
+        "raw_text": "苏州诺瓦测试显示材料有限公司 / Suzhou Nova Test Display Materials Co., Ltd.",
+        "rule": "境内收货人中文全称取自入境报关到货通知，英文全称与地址取自合同/发票",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "import_date",
+        "label_cn": "进口日期",
+        "status": "FILLED",
+        "value": "2026-09-15",
+        "page_no": 1,
+        "raw_text": "到货日期 / Arrival 2026-09-15",
+        "rule": "进口/到货日期采用入境报关到货通知 Arrival 日期",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "vessel_voyage",
+        "label_cn": "运输工具名称及航次号",
+        "status": "FILLED",
+        "value": "XX9002 (13 SEP 2026)",
+        "page_no": 2,
+        "raw_text": "FRA - PVG / Demo flight XX9002 / 13 SEP 2026",
+        "rule": "运输工具名称及航次号优先提取航空运单 Routing 航班号",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "bill_of_lading_no",
+        "label_cn": "提运单号",
+        "status": "FILLED",
+        "value": "MAWB: 000-26091202 / HAWB: DEMO-FRA-260912",
+        "page_no": 1,
+        "raw_text": "主运单号 / MAWB 000-26091202",
+        "rule": "运输编号优先采用运单 (优先级: air_waybill,arrival_notice,invoice,contract)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "storage_location",
+        "label_cn": "货物存放地点",
+        "status": "FILLED",
+        "value": "PVG-DEMO-260915-02",
+        "page_no": 1,
+        "raw_text": "仓储编号 / Storage Ref. PVG-DEMO-260915-02",
+        "rule": "货物存放地点提取自入境报关到货通知仓储编号",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "end_user",
+        "label_cn": "消费使用单位",
+        "status": "FILLED",
+        "value": "苏州诺瓦测试显示材料有限公司",
+        "page_no": 1,
+        "raw_text": "苏州诺瓦测试显示材料有限公司 / Suzhou Nova Test Display Materials Co., Ltd.",
+        "rule": "境内收货人中文全称取自入境报关到货通知，英文全称与地址取自合同/发票",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "loading_port",
+        "label_cn": "启运港",
+        "status": "FILLED",
+        "value": "法兰克福 (Frankfurt / FRA)",
+        "page_no": 1,
+        "raw_text": "主运单号 / MAWB 000-26091202",
+        "rule": "运输编号优先采用运单 (优先级: air_waybill,arrival_notice,invoice,contract)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "origin_country_header",
+        "label_cn": "启运国（地区）",
+        "status": "FILLED",
+        "value": "德国 (Germany / DEU)",
+        "page_no": 1,
+        "raw_text": "主运单号 / MAWB 000-26091202",
+        "rule": "运输编号优先采用运单 (优先级: air_waybill,arrival_notice,invoice,contract)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "entry_port",
+        "label_cn": "入境口岸",
+        "status": "FILLED",
+        "value": "上海浦东国际机场 (PVG)",
+        "page_no": 1,
+        "raw_text": "主运单号 / MAWB 000-26091202",
+        "rule": "运输编号优先采用运单 (优先级: air_waybill,arrival_notice,invoice,contract)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "chargeable_weight_kg",
+        "label_cn": "计费重量（独立运输字段）",
+        "status": "FILLED",
+        "value": "39.00 KG",
+        "page_no": 2,
+        "raw_text": "Chargeable Weight: 39.0 KG",
+        "rule": "计费重量作为独立运输字段优先采用航空运单与到货通知",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "insurance",
+        "label_cn": "保费",
+        "status": "FILLED",
+        "value": "NIL（提单第 2 页载明 Insurance: NIL，保费为 0）",
+        "page_no": 2,
+        "raw_text": "Insurance: NIL",
+        "rule": "AWB 保费栏直取：Insurance NIL 视为保费 0，不做编造",
+        "validation": "VERIFIED"
+      }
+    ],
+    "合同.pdf": [
+      {
+        "field_key": "entry_customs",
+        "label_cn": "进境关别",
+        "status": "FILLED",
+        "value": "上海浦东国际机场 (PVG)",
+        "page_no": 1,
+        "raw_text": "Transport: Air freight / AIR WAYBILL",
+        "rule": "识别单据中的 Air freight 与 AIR WAYBILL 映射为海关航空运输",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "overseas_shipper",
+        "label_cn": "境外发货人",
+        "status": "FILLED",
+        "value": "Helios Sample Compounds GmbH (8 Fictional Avenue, 60314 Frankfurt am Main, Germany)",
+        "page_no": 1,
+        "raw_text": "Helios Sample Compounds GmbH, 8 Fictional Avenue, 60314 Frankfurt am Main, Germany",
+        "rule": "境外发货人采用合同 Vendor 与发票 From 主体",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "transport_mode",
+        "label_cn": "运输方式",
+        "status": "FILLED",
+        "value": "航空运输 (Air freight / 代码 5)",
+        "page_no": 1,
+        "raw_text": "Transport: Air freight / AIR WAYBILL",
+        "rule": "识别单据中的 Air freight 与 AIR WAYBILL 映射为海关航空运输",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "contract_no",
+        "label_cn": "合同协议号",
+        "status": "FILLED",
+        "value": "CT-DEMO-260902 (PO: PO-DEMO-260902)",
+        "page_no": 1,
+        "raw_text": "Contract No. CT-DEMO-260902 / PO PO-DEMO-260902",
+        "rule": "合同协议号优先采用合同正本 Contract No.",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "trading_country",
+        "label_cn": "贸易国（地区）",
+        "status": "FILLED",
+        "value": "德国 (Germany / DEU)",
+        "page_no": 1,
+        "raw_text": "Helios Sample Compounds GmbH, 8 Fictional Avenue, 60314 Frankfurt am Main, Germany",
+        "rule": "境外发货人采用合同 Vendor 与发票 From 主体",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "incoterms",
+        "label_cn": "成交方式",
+        "status": "FILLED",
+        "value": "CPT PVG, Incoterms 2020",
+        "page_no": 1,
+        "raw_text": "Incoterms CPT PVG, Incoterms 2020",
+        "rule": "成交方式标准化提取自合同与发票 Incoterms",
+        "validation": "VERIFIED"
+      }
+    ],
+    "发票.pdf": [
+      {
+        "field_key": "trade_mode",
+        "label_cn": "监管方式",
+        "status": "FILLED",
+        "value": "一般贸易 (General trade / 0110)",
+        "page_no": 1,
+        "raw_text": "Trade Mode: General trade",
+        "rule": "提取自商业发票 Trade Mode",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "levy_nature",
+        "label_cn": "征免性质",
+        "status": "FILLED",
+        "value": "一般征税（101）— 由监管方式「一般贸易 0110」按海关征免性质对照表推导",
+        "page_no": 1,
+        "raw_text": "Trade Mode: General trade",
+        "rule": "监管方式 0110 一般贸易 → 征免性质 101 一般征税（规则推导，非编造）",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "freight",
+        "label_cn": "运费",
+        "status": "FILLED",
+        "value": "CNY 780.00",
+        "page_no": 3,
+        "raw_text": "FREIGHT AMOUNT 780.00 CNY",
+        "rule": "运费自发票第 3 页 FREIGHT AMOUNT 独立拆解保存",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "attached_documents",
+        "label_cn": "随附单证及编号",
+        "status": "FILLED",
+        "value": "合同: CT-DEMO-260902 | PO: PO-DEMO-260902 | 发票: INV-DEMO-260912 | 箱单: PL-DEMO-260912 | 到货通知: AN-DEMO-260915",
+        "page_no": 1,
+        "raw_text": "Document No.: INV-DEMO-260912",
+        "rule": "发票编号优先采用商业发票并经箱单交叉核对",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "marks_and_remarks",
+        "label_cn": "标记唛码及备注",
+        "status": "WARNING",
+        "value": "商品金额合计 CNY 255,120.00 + 运费 CNY 780.00 = 发票总额 CNY 255,900.00；总体积 0.207 CBM；具体申报要素与税率编码：[缺失/待补充]",
+        "page_no": 3,
+        "raw_text": "TOTAL AMOUNT CNY 255,900.00",
+        "rule": "发票总额 = 商品金额合计 + 运费",
+        "validation": "VERIFIED"
+      }
+    ],
+    "箱单.pdf": [
+      {
+        "field_key": "package_kind",
+        "label_cn": "包装种类",
+        "status": "FILLED",
+        "value": "纸箱/木托 (FIBREBOARD BOX & HEAT-TREATED PALLET)",
+        "page_no": 1,
+        "raw_text": "Total Package Quantity: 3 packages",
+        "rule": "外包装件数采用箱单与运单核对后的总箱数（与商品 PC 数量严格区分）",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "packages_count",
+        "label_cn": "件数",
+        "status": "FILLED",
+        "value": "3 (packages)",
+        "page_no": 1,
+        "raw_text": "Total Package Quantity: 3 packages",
+        "rule": "外包装件数采用箱单与运单核对后的总箱数（与商品 PC 数量严格区分）",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "gross_weight_kg",
+        "label_cn": "毛重（千克）",
+        "status": "FILLED",
+        "value": "39.00 KG",
+        "page_no": 1,
+        "raw_text": "Total Gross Weight: 39.0 KG",
+        "rule": "毛重优先采用箱单分箱求和与整票核对值 (优先级: packing_list,arrival_notice,air_waybill,invoice)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "net_weight_kg",
+        "label_cn": "净重（千克）",
+        "status": "FILLED",
+        "value": "28.00 KG",
+        "page_no": 1,
+        "raw_text": "TOTAL Net Weight: 28.0 KG",
+        "rule": "包装净重优先采用箱单分箱求和与整票核对值 (优先级: packing_list,arrival_notice,air_waybill,invoice)",
+        "validation": "VERIFIED"
+      }
+    ]
+  },
+  "parsed_context_by_doc": {
+    "contract_context": {
+      "file_name": "合同.pdf",
+      "page_count": 1,
+      "page_types": [
+        "CONTRACT_MAIN"
+      ],
+      "dataset_id": "DEMO-SH-20260907-02",
+      "po_no": "PO-DEMO-260902",
+      "contract_no": "CT-DEMO-260902",
+      "po_date": "2026-09-08",
+      "currency": "CNY",
+      "payment_terms": "Net 30 days",
+      "incoterms": "CPT PVG, Incoterms 2020",
+      "transport_mode_raw": "Air freight",
+      "seller_name_en": "Helios Sample Compounds GmbH",
+      "seller_address": "8 Fictional Avenue, 60314 Frankfurt am Main, Germany",
+      "buyer_name_en": "Suzhou Nova Test Display Materials Co., Ltd.",
+      "buyer_address": "Building 12, No. 66 Sample Industrial Road, Suzhou 215000, China",
+      "items": [
+        {
+          "line_no": 1,
+          "part_number": "HSC-7100",
+          "name_en": "Optical Coupling Additive D20",
+          "name_cn": "光学耦合添加剂 D20",
+          "hs_code": "3824999999",
+          "quantity": 3,
+          "unit": "PC",
+          "unit_price": 21380.0,
+          "amount": 64140.0,
+          "net_weight_kg": null,
+          "country_of_origin": "Germany",
+          "bbox": [
+            267.04,
+            731.03,
+            274.34,
+            764.19
+          ]
+        },
+        {
+          "line_no": 2,
+          "part_number": "HSC-7200",
+          "name_en": "57,650.00 115,300.00 Germany",
+          "name_cn": "显示工艺树脂 E25",
+          "hs_code": "3907999990",
+          "quantity": 2,
+          "unit": "PC",
+          "unit_price": 57650.0,
+          "amount": 115300.0,
+          "net_weight_kg": null,
+          "country_of_origin": "Germany",
+          "bbox": [
+            293.24,
+            731.03,
+            300.54,
+            764.19
+          ]
+        },
+        {
+          "line_no": 3,
+          "part_number": "HSC-7300",
+          "name_en": "4 PC 18,920.00 75,680.00 Germany",
+          "name_cn": "电子级改性剂 F30",
+          "hs_code": "3815900000",
+          "quantity": 4,
+          "unit": "PC",
+          "unit_price": 18920.0,
+          "amount": 75680.0,
+          "net_weight_kg": null,
+          "country_of_origin": "Germany",
+          "bbox": [
+            319.44,
+            731.03,
+            326.74,
+            764.19
+          ]
+        }
+      ],
+      "declared_total_qty": 9,
+      "declared_total_amount": 255120.0
+    },
+    "invoice_context": {
+      "file_name": "发票.pdf",
+      "page_count": 3,
+      "page_types": [
+        "INVOICE_SUMMARY_PAGE",
+        "INVOICE_CONTINUATION_PAGE",
+        "INVOICE_CONTINUATION_PAGE"
+      ],
+      "dataset_id": "DEMO-SH-20260907-02",
+      "invoice_no": "INV-DEMO-260912",
+      "invoice_date": "2026-09-12",
+      "po_no": "PO-DEMO-260902",
+      "hawb_no": "DEMO-FRA-260912",
+      "trade_mode": "General trade",
+      "currency": "CNY",
+      "goods_subtotal": 255120.0,
+      "freight_amount": 780.0,
+      "invoice_total": 255900.0,
+      "summary_items": {
+        "HSC-7100": {
+          "part_number": "HSC-7100",
+          "hs_code": "3824999999",
+          "quantity": 3,
+          "unit": "PC",
+          "unit_price": 21380.0,
+          "amount": 64140.0,
+          "net_weight_kg": 6.0,
+          "country_of_origin": "Germany",
+          "page_no": 1,
+          "bbox": [
+            258.37,
+            751.87,
+            265.67,
+            785.03
+          ]
+        },
+        "HSC-7200": {
+          "part_number": "HSC-7200",
+          "hs_code": "3907999990",
+          "quantity": 2,
+          "unit": "PC",
+          "unit_price": 57650.0,
+          "amount": 115300.0,
+          "net_weight_kg": 10.0,
+          "country_of_origin": "Germany",
+          "page_no": 1,
+          "bbox": [
+            282.57,
+            751.87,
+            289.87,
+            785.03
+          ]
+        },
+        "HSC-7300": {
+          "part_number": "HSC-7300",
+          "hs_code": "3815900000",
+          "quantity": 4,
+          "unit": "PC",
+          "unit_price": 18920.0,
+          "amount": 75680.0,
+          "net_weight_kg": 12.0,
+          "country_of_origin": "Germany",
+          "page_no": 1,
+          "bbox": [
+            306.77,
+            751.87,
+            314.07,
+            785.03
+          ]
+        }
+      },
+      "detail_items": {
+        "HSC-7100": {
+          "item_no": 1,
+          "part_number": "HSC-7100",
+          "name_en": "Optical Coupling Additive D20",
+          "name_cn": "光学耦合添加剂 D20",
+          "hs_code": "3824999999",
+          "unit_price": 21380.0,
+          "quantity": 3,
+          "unit": "PC",
+          "amount": 64140.0,
+          "batch_no": "T260910D",
+          "country_of_origin": "Germany",
+          "net_weight_kg": 6.0,
+          "page_no": 2,
+          "bbox": [
+            91.87,
+            467.46,
+            125.03,
+            474.76
+          ]
+        },
+        "HSC-7200": {
+          "item_no": 2,
+          "part_number": "HSC-7200",
+          "name_en": "Display Process Resin E25",
+          "name_cn": "显示工艺树脂 E25",
+          "hs_code": "3907999990",
+          "unit_price": 57650.0,
+          "quantity": 2,
+          "unit": "PC",
+          "amount": 115300.0,
+          "batch_no": "T260911E",
+          "country_of_origin": "Germany",
+          "net_weight_kg": 10.0,
+          "page_no": 3,
+          "bbox": [
+            91.87,
+            159.98,
+            125.03,
+            167.28
+          ]
+        },
+        "HSC-7300": {
+          "item_no": 3,
+          "part_number": "HSC-7300",
+          "name_en": "Electronic Grade Modifier F30",
+          "name_cn": "电子级改性剂 F30",
+          "hs_code": "3815900000",
+          "unit_price": 18920.0,
+          "quantity": 4,
+          "unit": "PC",
+          "amount": 75680.0,
+          "batch_no": "T260912F",
+          "country_of_origin": "Germany",
+          "net_weight_kg": 12.0,
+          "page_no": 3,
+          "bbox": [
+            91.87,
+            213.48,
+            125.03,
+            220.78
+          ]
+        }
+      }
+    },
+    "waybill_context": {
+      "file_name": "提单.pdf",
+      "page_count": 2,
+      "page_types": [
+        "ARRIVAL_NOTICE_PAGE",
+        "AIR_WAYBILL_PAGE"
+      ],
+      "dataset_id": "DEMO-SH-20260907-02",
+      "arrival_notice_no": "AN-DEMO-260915",
+      "buyer_name_cn": "苏州诺瓦测试显示材料有限公司",
+      "insurance_raw": "NIL",
+      "mawb_no": "000-26091202",
+      "hawb_no": "DEMO-FRA-260912",
+      "arrival_date": "2026-09-15",
+      "route": "Frankfurt (FRA) - Shanghai Pudong (PVG)",
+      "origin_port": "Frankfurt (FRA)",
+      "destination_port": "Shanghai Pudong (PVG)",
+      "flight_no": "XX9002",
+      "flight_date": "13 SEP 2026",
+      "transport_mode": "航空运输",
+      "transport_mode_code": "5",
+      "packages_count": 3,
+      "gross_weight_kg": 39.0,
+      "chargeable_weight_kg": 39.0,
+      "volume_cbm": 0.207,
+      "storage_ref": "PVG-DEMO-260915-02"
+    },
+    "packing_list_context": {
+      "file_name": "箱单.pdf",
+      "page_count": 7,
+      "page_types": [
+        "INVOICE_CONTINUATION_PAGE",
+        "PACKING_BOX_DETAIL_PAGE",
+        "PACKING_BOX_SUBTOTAL_PAGE",
+        "PACKING_BOX_DETAIL_PAGE",
+        "PACKING_BOX_SUBTOTAL_PAGE",
+        "PACKING_BOX_DETAIL_PAGE",
+        "PACKING_BOX_SUBTOTAL_PAGE"
+      ],
+      "dataset_id": "DEMO-SH-20260907-02",
+      "packing_list_no": "PL-DEMO-260912",
+      "invoice_no": "INV-DEMO-260912",
+      "hawb_no": "DEMO-FRA-260912",
+      "declared_packages_count": 3,
+      "declared_item_quantity": 9,
+      "declared_net_weight_kg": 28.0,
+      "declared_gross_weight_kg": 39.0,
+      "declared_volume_cbm": 0.207,
+      "summary_rows": {
+        "HSC-7100": {
+          "part_number": "HSC-7100",
+          "quantity": 3,
+          "unit": "PC",
+          "net_weight_kg": 6.0,
+          "package_no": "PKG-04",
+          "delivery_note": "DN-DEMO-04",
+          "bbox": [
+            244.27,
+            716.86,
+            251.57,
+            750.02
+          ]
+        },
+        "HSC-7200": {
+          "part_number": "HSC-7200",
+          "quantity": 2,
+          "unit": "PC",
+          "net_weight_kg": 10.0,
+          "package_no": "PKG-05",
+          "delivery_note": "DN-DEMO-05",
+          "bbox": [
+            270.47,
+            716.86,
+            277.77,
+            750.02
+          ]
+        },
+        "HSC-7300": {
+          "part_number": "HSC-7300",
+          "quantity": 4,
+          "unit": "PC",
+          "net_weight_kg": 12.0,
+          "package_no": "PKG-06",
+          "delivery_note": "DN-DEMO-06",
+          "bbox": [
+            296.67,
+            716.86,
+            303.97,
+            750.02
+          ]
+        }
+      },
+      "packages": [
+        {
+          "package_no": "PKG-04",
+          "delivery_note": "DN-DEMO-04",
+          "order_no": "ORD-DEMO-04",
+          "po_no": "PO-DEMO-260902",
+          "package_type_en": "FIBREBOARD BOX",
+          "package_type_cn": "纤维板箱/纸箱",
+          "dimensions_cm": "38 x 30 x 25 CM",
+          "package_count": 1,
+          "gross_weight_kg": 8.0,
+          "net_weight_kg": 6.0,
+          "volume_cbm": 0.0285,
+          "part_number": "HSC-7100",
+          "item_quantity": 3,
+          "item_unit": "PC",
+          "contents_per_pack": "3 x 2 KG",
+          "batch_no": "T260910D",
+          "source_pages": [
+            1,
+            2,
+            3
+          ],
+          "bbox": [
+            216.12,
+            232.43,
+            241.98,
+            239.83
+          ]
+        },
+        {
+          "package_no": "PKG-05",
+          "delivery_note": "DN-DEMO-05",
+          "order_no": "ORD-DEMO-05",
+          "po_no": "PO-DEMO-260902",
+          "package_type_en": "HEAT-TREATED PALLET",
+          "package_type_cn": "热处理木托盘",
+          "dimensions_cm": "60 x 40 x 45 CM",
+          "package_count": 1,
+          "gross_weight_kg": 16.0,
+          "net_weight_kg": 10.0,
+          "volume_cbm": 0.108,
+          "part_number": "HSC-7200",
+          "item_quantity": 2,
+          "item_unit": "PC",
+          "contents_per_pack": "2 x 5 KG",
+          "batch_no": "T260911E",
+          "source_pages": [
+            1,
+            4,
+            5
+          ],
+          "bbox": [
+            216.12,
+            232.43,
+            241.98,
+            239.83
+          ]
+        },
+        {
+          "package_no": "PKG-06",
+          "delivery_note": "DN-DEMO-06",
+          "order_no": "ORD-DEMO-06",
+          "po_no": "PO-DEMO-260902",
+          "package_type_en": "FIBREBOARD BOX",
+          "package_type_cn": "纤维板箱/纸箱",
+          "dimensions_cm": "50 x 40 x 35 CM",
+          "package_count": 1,
+          "gross_weight_kg": 15.0,
+          "net_weight_kg": 12.0,
+          "volume_cbm": 0.07,
+          "part_number": "HSC-7300",
+          "item_quantity": 4,
+          "item_unit": "PC",
+          "contents_per_pack": "4 x 3 KG",
+          "batch_no": "T260912F",
+          "source_pages": [
+            1,
+            6,
+            7
+          ],
+          "bbox": [
+            216.12,
+            232.43,
+            241.98,
+            239.83
+          ]
+        }
+      ]
+    }
+  },
+  "missing_to_confirm": [
+    "预录入编号",
+    "海关编号",
+    "申报日期",
+    "备案号",
+    "许可证号",
+    "经停港",
+    "杂费",
+    "各商品项详细海关申报要素（品牌类型、出口享惠情况、成分含量等）",
+    "完税价格与税费税率编码"
+  ],
+  "reconciliation": [
+    {
+      "rule_id": "RULE_LINK_01",
+      "category": "DOCUMENT_LINK",
+      "title": "四类单证交叉引用与同一笔业务关联校验",
+      "passed": true,
+      "severity": "PASS",
+      "formula_or_logic": "Contract.PO == Invoice.PO == PackingList.PO AND Invoice.No == PackingList.InvoiceNo AND Invoice.HAWB == Waybill.HAWB == PackingList.HAWB",
+      "expected_value": {
+        "dataset_id": "DEMO-SH-20260907-02",
+        "po_no": "PO-DEMO-260902",
+        "invoice_no": "INV-DEMO-260912",
+        "hawb_no": "DEMO-FRA-260912"
+      },
+      "actual_value": {
+        "datasets_found": [
+          "DEMO-SH-20260907-02"
+        ],
+        "po_aligned": true,
+        "invoice_aligned": true,
+        "hawb_aligned": true
+      },
+      "explanation": "确认四类单证同属业务 DEMO-SH-20260907-02：PO 编号 (PO-DEMO-260902)、发票号 (INV-DEMO-260912)、分运单号 (DEMO-FRA-260912) 跨文件 100% 闭环对齐。",
+      "source_pages": [
+        "合同.pdf#P1",
+        "发票.pdf#P1-2",
+        "提单.pdf#P1-2",
+        "箱单.pdf#P1-7"
+      ]
+    },
+    {
+      "rule_id": "RULE_DEDUP_02",
+      "category": "DEDUPLICATION",
+      "title": "跨单证与跨页重复物料去重核算（保留来源，汇总单算）",
+      "passed": true,
+      "severity": "PASS",
+      "formula_or_logic": "SUM(DISTINCT canonical_items.quantity BY part_number) == Contract.TOTAL_QTY == PackingList.TOTAL_QTY",
+      "expected_value": 9,
+      "actual_value": {
+        "canonical_qty": 9,
+        "raw_mentions_count": 21,
+        "naive_unfiltered_sum_would_be": 54
+      },
+      "explanation": "3 项商品在 13 页单证中共出现 21 次（若不区分汇总页/续页/单箱小结页直接相加会误算为 54 PC）；经跨页去重后，按唯一料号汇总数量为 9 PC（HSC-7100: 3 PC、HSC-7200: 2 PC、HSC-7300: 4 PC），与合同及箱单整票汇总完全一致。",
+      "source_pages": [
+        "合同.pdf#P1",
+        "发票.pdf#P1-3",
+        "箱单.pdf#P1-7"
+      ]
+    },
+    {
+      "rule_id": "RULE_AMOUNT_03",
+      "category": "AMOUNT_CHECK",
+      "title": "商品金额、运费与发票总额三方财务勾稽校验",
+      "passed": true,
+      "severity": "PASS",
+      "formula_or_logic": "SUM(qty * unit_price) == Goods_Subtotal AND Goods_Subtotal + Freight == Invoice_Total",
+      "expected_value": 255900.0,
+      "actual_value": {
+        "goods_total_amount": 255120.0,
+        "freight_amount": 780.0,
+        "invoice_total_amount": 255900.0,
+        "diff_explained_by_freight": 780.0
+      },
+      "explanation": "各商品明细数量×单价之和为 CNY 255,120.00（与合同总额及发票商品小计一致）；与发票总额 CNY 255,900.00 之间的差额 CNY 780.00 已由发票第 3 页 FREIGHT AMOUNT（运费）完整解释。",
+      "source_pages": [
+        "合同.pdf#P1",
+        "发票.pdf#P1",
+        "发票.pdf#P3"
+      ]
+    },
+    {
+      "rule_id": "RULE_WEIGHT_04",
+      "category": "WEIGHT_CHECK",
+      "title": "分箱净重、毛重求和核对与航空计费重量独立分离校验",
+      "passed": true,
+      "severity": "PASS",
+      "formula_or_logic": "SUM(box.net) == Total_Net AND SUM(box.gross) == Total_Gross == AWB.Gross AND Chargeable_Weight stored independently",
+      "expected_value": {
+        "net_weight_kg": 28.0,
+        "gross_weight_kg": 39.0,
+        "chargeable_weight_kg": 39.0
+      },
+      "actual_value": {
+        "sum_of_boxes_net_kg": 28.0,
+        "sum_of_boxes_gross_kg": 39.0,
+        "awb_gross_kg": 39.0,
+        "awb_chargeable_kg": 39.0,
+        "sum_of_boxes_volume_cbm": 0.2065
+      },
+      "explanation": "3 个分箱净重求和 (6.0 + 10.0 + 12.0 = 28.0 KG) 与整票净重 28.0 KG 一致；分箱毛重求和 (8.0 + 16.0 + 15.0 = 39.0 KG) 与整票毛重 39.0 KG 一致；航空计费重量 39.0 KG 已作为独立运输字段保存。",
+      "source_pages": [
+        "箱单.pdf#P1-7",
+        "提单.pdf#P1-2",
+        "发票.pdf#P1-2"
+      ]
+    },
+    {
+      "rule_id": "RULE_QTY_PKG_05",
+      "category": "QUANTITY_VS_PACKAGE",
+      "title": "商品申报数量 (PC) 与外包装件数 (Packages) 独立字段防混淆校验",
+      "passed": true,
+      "severity": "PASS",
+      "formula_or_logic": "Item_Total_Qty (PC) != Package_Count (Packages) AND Package_Count == COUNT(DISTINCT Package_No)",
+      "expected_value": {
+        "item_quantity": "9 PC",
+        "package_count": "3 packages"
+      },
+      "actual_value": {
+        "item_quantity": 9,
+        "item_unit": "PC",
+        "package_count": 3,
+        "package_unit": "packages",
+        "package_breakdown": [
+          "PKG-04(纤维板箱/纸箱): 装入 HSC-7100 × 3 PC",
+          "PKG-05(热处理木托盘): 装入 HSC-7200 × 2 PC",
+          "PKG-06(纤维板箱/纸箱): 装入 HSC-7300 × 4 PC"
+        ]
+      },
+      "explanation": "严格区分商品总数量 (9 PC) 与外包装总件数 (3 packages)：9 PC 商品分装于 3 个独立包装（PKG-04: HSC-7100 3 PC；PKG-05: HSC-7200 2 PC；PKG-06: HSC-7300 4 PC），分别映射至报关单商品数量列与表头件数栏。",
+      "source_pages": [
+        "箱单.pdf#P1-7",
+        "提单.pdf#P1-2"
+      ]
+    },
+    {
+      "rule_id": "RULE_MISSING_06",
+      "category": "MISSING_FIELDS",
+      "title": "未提供报关要素与税费编码显式缺失标记校验（零幻觉防线）",
+      "passed": true,
+      "severity": "INFO",
+      "formula_or_logic": "Fields absent in source PDFs MUST be marked status='MISSING' without LLM fabrication",
+      "expected_value": "MISSING_EXPLICITLY_MARKED",
+      "actual_value": {
+        "missing_fields_count": 9,
+        "missing_fields": [
+          "预录入编号",
+          "海关编号",
+          "申报日期",
+          "备案号",
+          "许可证号",
+          "经停港",
+          "杂费",
+          "各商品项详细海关申报要素（品牌类型、出口享惠情况、成分含量等）",
+          "完税价格与税费税率编码"
+        ],
+        "explicitly_marked_field_keys": [
+          "pre_entry_no",
+          "customs_no",
+          "declaration_date",
+          "record_no",
+          "license_no",
+          "transit_port",
+          "incidental_fee"
+        ],
+        "fabricated_missing_field_keys": []
+      },
+      "explanation": "已对素材未提供的 9 项报关单字段（如预录入编号、海关编号、备案号、许可证号、保费、杂费、具体申报要素与税费编码）显式标记为 [缺失/待补充]，零幻觉捏造。",
+      "source_pages": [
+        "报关单样例.pdf#P1"
+      ]
+    }
+  ]
+}

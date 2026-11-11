@@ -1,0 +1,365 @@
+{
+  "business_id": "DEMO-SH-20260907-02",
+  "trace_id": "tr_t1_970831deb9fc",
+  "stages": 5,
+  "steps": 20,
+  "duration_ms": 12060.78,
+  "field_status": {
+    "MISSING": 7,
+    "FILLED": 25,
+    "WARNING": 1
+  },
+  "fields_by_source_file": {
+    "（无来源）": [
+      {
+        "field_key": "pre_entry_no",
+        "label_cn": "预录入编号",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 报关行申报时生成]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "customs_no",
+        "label_cn": "海关编号",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 海关审结后回执]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "declaration_date",
+        "label_cn": "申报日期",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 实际申报日填写]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "record_no",
+        "label_cn": "备案号",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 一般贸易免填或待补]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "license_no",
+        "label_cn": "许可证号",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 素材未提供]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "transit_port",
+        "label_cn": "经停港",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 直航或未提供]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      },
+      {
+        "field_key": "incidental_fee",
+        "label_cn": "杂费",
+        "status": "MISSING",
+        "value": "[缺失/待补充 - 素材未提供]",
+        "page_no": null,
+        "raw_text": "",
+        "rule": "",
+        "validation": null
+      }
+    ],
+    "提单.pdf": [
+      {
+        "field_key": "domestic_consignee",
+        "label_cn": "境内收货人",
+        "status": "FILLED",
+        "value": "苏州诺瓦测试显示材料有限公司（统一社会信用代码：[缺失/待补充]）",
+        "page_no": 1,
+        "raw_text": "苏州诺瓦测试显示材料有限公司 / Suzhou Nova Test Display Materials Co., Ltd.",
+        "rule": "境内收货人中文全称取自入境报关到货通知，英文全称与地址取自合同/发票",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "import_date",
+        "label_cn": "进口日期",
+        "status": "FILLED",
+        "value": "2026-09-15",
+        "page_no": 1,
+        "raw_text": "到货日期 / Arrival 2026-09-15",
+        "rule": "进口/到货日期采用入境报关到货通知 Arrival 日期",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "vessel_voyage",
+        "label_cn": "运输工具名称及航次号",
+        "status": "FILLED",
+        "value": "XX9002 (13 SEP 2026)",
+        "page_no": 2,
+        "raw_text": "FRA - PVG / Demo flight XX9002 / 13 SEP 2026",
+        "rule": "运输工具名称及航次号优先提取航空运单 Routing 航班号",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "bill_of_lading_no",
+        "label_cn": "提运单号",
+        "status": "FILLED",
+        "value": "MAWB: 000-26091202 / HAWB: DEMO-FRA-260912",
+        "page_no": 1,
+        "raw_text": "主运单号 / MAWB 000-26091202",
+        "rule": "运输编号优先采用运单 (优先级: air_waybill,arrival_notice,invoice,contract)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "storage_location",
+        "label_cn": "货物存放地点",
+        "status": "FILLED",
+        "value": "PVG-DEMO-260915-02",
+        "page_no": 1,
+        "raw_text": "仓储编号 / Storage Ref. PVG-DEMO-260915-02",
+        "rule": "货物存放地点提取自入境报关到货通知仓储编号",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "end_user",
+        "label_cn": "消费使用单位",
+        "status": "FILLED",
+        "value": "苏州诺瓦测试显示材料有限公司",
+        "page_no": 1,
+        "raw_text": "苏州诺瓦测试显示材料有限公司 / Suzhou Nova Test Display Materials Co., Ltd.",
+        "rule": "境内收货人中文全称取自入境报关到货通知，英文全称与地址取自合同/发票",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "loading_port",
+        "label_cn": "启运港",
+        "status": "FILLED",
+        "value": "法兰克福 (Frankfurt / FRA)",
+        "page_no": 1,
+        "raw_text": "主运单号 / MAWB 000-26091202",
+        "rule": "运输编号优先采用运单 (优先级: air_waybill,arrival_notice,invoice,contract)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "origin_country_header",
+        "label_cn": "启运国（地区）",
+        "status": "FILLED",
+        "value": "德国 (Germany / DEU)",
+        "page_no": 1,
+        "raw_text": "主运单号 / MAWB 000-26091202",
+        "rule": "运输编号优先采用运单 (优先级: air_waybill,arrival_notice,invoice,contract)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "entry_port",
+        "label_cn": "入境口岸",
+        "status": "FILLED",
+        "value": "上海浦东国际机场 (PVG)",
+        "page_no": 1,
+        "raw_text": "主运单号 / MAWB 000-26091202",
+        "rule": "运输编号优先采用运单 (优先级: air_waybill,arrival_notice,invoice,contract)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "chargeable_weight_kg",
+        "label_cn": "计费重量（独立运输字段）",
+        "status": "FILLED",
+        "value": "39.00 KG",
+        "page_no": 2,
+        "raw_text": "Chargeable Weight: 39.0 KG",
+        "rule": "计费重量作为独立运输字段优先采用航空运单与到货通知",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "insurance",
+        "label_cn": "保费",
+        "status": "FILLED",
+        "value": "NIL（提单第 2 页载明 Insurance: NIL，保费为 0）",
+        "page_no": 2,
+        "raw_text": "Insurance: NIL",
+        "rule": "AWB 保费栏直取：Insurance NIL 视为保费 0，不做编造",
+        "validation": "VERIFIED"
+      }
+    ],
+    "合同.pdf": [
+      {
+        "field_key": "entry_customs",
+        "label_cn": "进境关别",
+        "status": "FILLED",
+        "value": "上海浦东国际机场 (PVG)",
+        "page_no": 1,
+        "raw_text": "Transport: Air freight / AIR WAYBILL",
+        "rule": "识别单据中的 Air freight 与 AIR WAYBILL 映射为海关航空运输",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "overseas_shipper",
+        "label_cn": "境外发货人",
+        "status": "FILLED",
+        "value": "Helios Sample Compounds GmbH (8 Fictional Avenue, 60314 Frankfurt am Main, Germany)",
+        "page_no": 1,
+        "raw_text": "Helios Sample Compounds GmbH, 8 Fictional Avenue, 60314 Frankfurt am Main, Germany",
+        "rule": "境外发货人采用合同 Vendor 与发票 From 主体",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "transport_mode",
+        "label_cn": "运输方式",
+        "status": "FILLED",
+        "value": "航空运输 (Air freight / 代码 5)",
+        "page_no": 1,
+        "raw_text": "Transport: Air freight / AIR WAYBILL",
+        "rule": "识别单据中的 Air freight 与 AIR WAYBILL 映射为海关航空运输",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "contract_no",
+        "label_cn": "合同协议号",
+        "status": "FILLED",
+        "value": "CT-DEMO-260902 (PO: PO-DEMO-260902)",
+        "page_no": 1,
+        "raw_text": "Contract No. CT-DEMO-260902 / PO PO-DEMO-260902",
+        "rule": "合同协议号优先采用合同正本 Contract No.",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "trading_country",
+        "label_cn": "贸易国（地区）",
+        "status": "FILLED",
+        "value": "德国 (Germany / DEU)",
+        "page_no": 1,
+        "raw_text": "Helios Sample Compounds GmbH, 8 Fictional Avenue, 60314 Frankfurt am Main, Germany",
+        "rule": "境外发货人采用合同 Vendor 与发票 From 主体",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "incoterms",
+        "label_cn": "成交方式",
+        "status": "FILLED",
+        "value": "CPT PVG, Incoterms 2020",
+        "page_no": 1,
+        "raw_text": "Incoterms CPT PVG, Incoterms 2020",
+        "rule": "成交方式标准化提取自合同与发票 Incoterms",
+        "validation": "VERIFIED"
+      }
+    ],
+    "发票.pdf": [
+      {
+        "field_key": "trade_mode",
+        "label_cn": "监管方式",
+        "status": "FILLED",
+        "value": "一般贸易 (General trade / 0110)",
+        "page_no": 1,
+        "raw_text": "Trade Mode: General trade",
+        "rule": "提取自商业发票 Trade Mode",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "levy_nature",
+        "label_cn": "征免性质",
+        "status": "FILLED",
+        "value": "一般征税（101）— 由监管方式「一般贸易 0110」按海关征免性质对照表推导",
+        "page_no": 1,
+        "raw_text": "Trade Mode: General trade",
+        "rule": "监管方式 0110 一般贸易 → 征免性质 101 一般征税（规则推导，非编造）",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "freight",
+        "label_cn": "运费",
+        "status": "FILLED",
+        "value": "CNY 780.00",
+        "page_no": 3,
+        "raw_text": "FREIGHT AMOUNT 780.00 CNY",
+        "rule": "运费自发票第 3 页 FREIGHT AMOUNT 独立拆解保存",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "attached_documents",
+        "label_cn": "随附单证及编号",
+        "status": "FILLED",
+        "value": "合同: CT-DEMO-260902 | PO: PO-DEMO-260902 | 发票: INV-DEMO-260912 | 箱单: PL-DEMO-260912 | 到货通知: AN-DEMO-260915",
+        "page_no": 1,
+        "raw_text": "Document No.: INV-DEMO-260912",
+        "rule": "发票编号优先采用商业发票并经箱单交叉核对",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "marks_and_remarks",
+        "label_cn": "标记唛码及备注",
+        "status": "WARNING",
+        "value": "商品金额合计 CNY 255,120.00 + 运费 CNY 780.00 = 发票总额 CNY 255,900.00；总体积 0.207 CBM；具体申报要素与税率编码：[缺失/待补充]",
+        "page_no": 3,
+        "raw_text": "TOTAL AMOUNT CNY 255,900.00",
+        "rule": "发票总额 = 商品金额合计 + 运费",
+        "validation": "VERIFIED"
+      }
+    ],
+    "箱单.pdf": [
+      {
+        "field_key": "package_kind",
+        "label_cn": "包装种类",
+        "status": "FILLED",
+        "value": "纸箱/木托 (FIBREBOARD BOX & HEAT-TREATED PALLET)",
+        "page_no": 1,
+        "raw_text": "Total Package Quantity: 3 packages",
+        "rule": "外包装件数采用箱单与运单核对后的总箱数（与商品 PC 数量严格区分）",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "packages_count",
+        "label_cn": "件数",
+        "status": "FILLED",
+        "value": "3 (packages)",
+        "page_no": 1,
+        "raw_text": "Total Package Quantity: 3 packages",
+        "rule": "外包装件数采用箱单与运单核对后的总箱数（与商品 PC 数量严格区分）",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "gross_weight_kg",
+        "label_cn": "毛重（千克）",
+        "status": "FILLED",
+        "value": "39.00 KG",
+        "page_no": 1,
+        "raw_text": "Total Gross Weight: 39.0 KG",
+        "rule": "毛重优先采用箱单分箱求和与整票核对值 (优先级: packing_list,arrival_notice,air_waybill,invoice)",
+        "validation": "VERIFIED"
+      },
+      {
+        "field_key": "net_weight_kg",
+        "label_cn": "净重（千克）",
+        "status": "FILLED",
+        "value": "28.00 KG",
+        "page_no": 1,
+        "raw_text": "TOTAL Net Weight: 28.0 KG",
+        "rule": "包装净重优先采用箱单分箱求和与整票核对值 (优先级: packing_list,arrival_notice,air_waybill,invoice)",
+        "validation": "VERIFIED"
+      }
+    ]
+  },
+  "missing_to_confirm": [
+    "预录入编号",
+    "海关编号",
+    "申报日期",
+    "备案号",
+    "许可证号",
+    "经停港",
+    "杂费",
+    "各商品项详细海关申报要素（品牌类型、出口享惠情况、成分含量等）",
+    "完税价格与税费税率编码"
+  ]
+}
